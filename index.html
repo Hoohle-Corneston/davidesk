@@ -1,8 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head></head>
-  <body>
-    <h1>Linux!!</h1>
-    <iframe src='https://github.com/torvalds/linux'></iframe>
-  </body>
-</html>
+<body>
+	<script>
+		var loadFile = function(event) {
+					var output = document.getElementById('output');
+					output.src = URL.createObjectURL(event.target.files[0]);
+					output.onload = function() {
+								URL.revokeObjectURL(output.src)
+							}
+				};
+	</script>
+	<input type="file" accept="video/*" onchange="loadFile(event)"></input><video height="600px" width="800px" controls="true" src="" id="output"></video></body>
+	<style>
+		body {
+			background-color: #d1a038;
+			background-image: linear-gradient(to bottom, #3868d1, #9b38d1, #d1385c, #3868d1)
+		}
+	</style>
