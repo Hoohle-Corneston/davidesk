@@ -11,8 +11,12 @@
 							}
 				};
 	</script>
-	<input type="file" accept="video/*" onchange="loadFile(event)"></input><video height="600px" width="800px" controls="true" src="" id="output"></video></body>
-	<button type="button" name="link2example">Example video</button>
+	<video height="600px" width="800px" controls="true" src="" id="output"></video>
+	<input type="file" accept="video/*" onchange="loadFile(event)"></input>
+	<form action="example.html">
+                <button type="submit" name="link2example">Example video</button>
+        </form>
+</body>
 	<style>
 		button {
 			color: #ffffff;
